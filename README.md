@@ -6,7 +6,7 @@ O fluxo central: registrar o pedido → cobrar via PIX → confirmar o pagamento
 
 ## Stack
 
-- Java 17 + Spring Boot 3.3
+- Java 25 + Spring Boot 3.5
 - PostgreSQL
 - Spring Data JPA + Bean Validation
 - Lombok
@@ -55,7 +55,7 @@ As demais camadas (controller, service, repository, gateway, security, exception
 
 ## Como rodar
 
-Pré-requisitos: Java 17, Maven e Docker.
+Pré-requisitos: Java 25, Maven e Docker.
 
 ```bash
 # 1. Variáveis de ambiente
