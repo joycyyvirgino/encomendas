@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: encomendas
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:encomendas}
+    username: ${DB_USER:encomendas}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      # Provisório: na semana 8 troca por Flyway + validate
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: America/Sao_Paulo
+
+server:
+  port: 8080
+
+# Segredos sempre por variável de ambiente (ver .env.example)
+app:
+  jwt:
+    secret: ${JWT_SECRET:}
+  mercadopago:
+    access-token: ${MP_ACCESS_TOKEN:}
+    webhook-secret: ${MP_WEBHOOK_SECRET:}
+  cobranca:
+    expiracao-minutos: 30
